@@ -1,0 +1,75 @@
+:root {
+        --toggle-light: #fff; /*ball*/
+        --toggle-dark: black;
+    }
+.label {
+    background-color: rgba(0, 0, 0, 0.534); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 30px;
+    width: 70px;
+}
+.moon{
+    color: #ff9f43;
+    font-size: 30px;
+}
+.sun{
+    color: #ff9f43;
+    font-size: 30px;
+}
+.ball{
+    width: 35px; 
+    position: absolute;
+    background-color: var(--toggle-light);
+    height: 35px;
+    left: 1.5px;
+    top: 2px;
+    bottom: 20px;
+    cursor:  pointer;
+    transition: 0.2s linear;
+    border-radius: 100px;
+}
+.ball:before{
+    width: 35px;
+    position: absolute;
+    background-color: #fff;
+    height: 35px;
+    left: 1.5px;
+    top: 2px;
+    bottom: 20px;
+    cursor:  pointer;
+    transition: 0.2s linear;   
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(43px);
+    transition: 0.2s linear; 
+
+}
+/* .checkbox:checked + .label .ball:before {
+    transform: translateX(-1px);
+} */
+.checkbox{
+    opacity: 0;
+}
+/* .ball{
+    border-radius: 100px;
+}
+.ball::before {
+    border-radius: 100px; 
+}*/
+.checkbox:checked + .label { 
+    background-color:rgba(169, 169, 169, 0.616);
+}
+.checkbox:checked + .label .ball { 
+    background-color: #000;
+}
+.checkbox:checked + label .moon{
+    color:#fff;
+}
+
+
